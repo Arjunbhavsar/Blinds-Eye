@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    tools:context="blindpeople.edu.blindpeopleapp.objectrecognition">
+
+    <LinearLayout
+        android:layout_width="100sp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:onClick="addObject"
+            android:text="New Object" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:padding="5sp">
+
+            <LinearLayout
+                android:id="@+id/scrollLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:orientation="vertical" />
+
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout xmlns:opencv="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/opencvcam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            opencv:camera_id="any" />
+
+        <TextView
+            android:id="@+id/detectedObjTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="initializing..."
+            android:textColor="#ff0000"
+            android:textSize="36sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

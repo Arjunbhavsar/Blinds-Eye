@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="DarkBalieiroTheme">
+
+    </style>
+
+    <!-- the theme applied to the application or activity -->
+    <style name="DarkBalieiroTheme" parent="android:style/Theme.Holo">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@drawable/main_background</item>
+        <item name="android:actionBarStyle">@style/BalieiroActionBar</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="BalieiroActionBar" parent="android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/top_bar_background</item>
+        <item name="android:titleTextStyle">@style/BalieiroActionBarTitleText</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="BalieiroActionBarTitleText" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+</resources>
